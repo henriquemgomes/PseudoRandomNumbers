@@ -12,12 +12,4 @@ public class Utils {
         }
         System.out.print("]");
     }
-
-    public static String transformArrayIntoString(int[] array) {
-        String arrayString = "";
-        for (int i = 0; i < array.length; i++) {
-            arrayString += array[i];
-        }
-        return arrayString;
-    }
 }

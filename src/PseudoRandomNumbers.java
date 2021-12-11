@@ -1,8 +1,5 @@
-import java.math.BigInteger;
-import java.util.ArrayList;
-
-import br.ufsc.ine5429.pseudorandomnumbers.Utils;
 import br.ufsc.ine5429.pseudorandomnumbers.LaggedFibonacciGenerator;
+import br.ufsc.ine5429.pseudorandomnumbers.LinearCongruentialGenerator;
 // System.out.println(seed);
 // seed ^= (seed << 21);
 // seed ^= (seed >>> 35);
@@ -12,6 +9,8 @@ import br.ufsc.ine5429.pseudorandomnumbers.LaggedFibonacciGenerator;
 
 public class PseudoRandomNumbers {
     public static void main(String[] args) {
-        System.out.println(LaggedFibonacciGenerator.generatePseudoRandomNumber(24, 3, 7));
+        System.out.println(LaggedFibonacciGenerator.generatePseudoRandomNumber(1024, 3, 7));
+        System.out.println();
+        System.out.println(LinearCongruentialGenerator.generatePseudoRandomNumber(1024, 5, 2, 257));
     }
 }
