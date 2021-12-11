@@ -1,6 +1,5 @@
 package br.ufsc.ine5429.pseudorandomnumbers;
 
-import java.math.BigDecimal;
 import java.math.BigInteger;
 
 public class LaggedFibonacciGenerator {
