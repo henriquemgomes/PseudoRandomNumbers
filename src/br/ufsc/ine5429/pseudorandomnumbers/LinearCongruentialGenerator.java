@@ -3,13 +3,17 @@ package br.ufsc.ine5429.pseudorandomnumbers;
 import java.math.BigInteger;
 
 public class LinearCongruentialGenerator{
-    public static BigInteger generatePseudoRandomNumber(int size, int multiplier, int increment, int modulus){
+    public static BigInteger generatePseudoRandomNumber(int size, int multiplier, int increment, int modulus, boolean useBitRange){
         int a = multiplier;
         int b = increment;
         int m = modulus;
         BigInteger seed = BigInteger.valueOf(System.nanoTime());
-        int[] randomNumbers = new int[size - 1];
-        String randomBitString = "1";
+        int[] randomNumbers = new int[size];
+        String randomBitString = "";
+        if (useBitRange) {
+            randomBitString = "1";
+            randomNumbers = new int[size - 1];
+        }
 
         randomNumbers[0] = seed.mod(BigInteger.valueOf(m)).intValue();
 

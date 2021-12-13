@@ -19,7 +19,7 @@ public class MillerRabinPrimalityTest {
         BigInteger a = BigInteger.ZERO;
 
         do {
-            a = new BigInteger(nMinOne.bitLength()-1, new Random());
+           a = LinearCongruentialGenerator.generatePseudoRandomNumber(nMinOne.bitLength(), 5, 2, 257, false);
         } while (a.compareTo(nMinOne) >= 0 || a.compareTo(BigInteger.ONE) <= 0);
 
         int k = 0;
