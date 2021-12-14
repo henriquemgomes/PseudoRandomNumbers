@@ -49,6 +49,7 @@ public class PseudoRandomNumbers {
                     System.out.println('+');
                     break;
                 }else{
+                    //printa um ponto a cada 100 numeros testados, um feedback para quem executou o programa
                     reps++;
                     if (reps == 100) {
                         System.out.print('.');
